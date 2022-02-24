@@ -1,0 +1,74 @@
+* {
+    font-family: $karlaFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $serifFont;
+    font-weight: 400;
+}
+
+// horizontal paddings
+.px {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+
+}
+button {
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    outline: none;
+    padding: 0.8em 3em;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    transition: all 0.4s;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        color: hsl(270, 9%, 17%);
+        color: $veryDarkViolet;
+    }
+}
+.wrapper {
+    width: 100%; 
+    background-color: hsl(270, 9%, 17%);
+    background-color: $veryDarkViolet;
+    margin: auto;
+}
+
+.img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    
+}
+.h-content {
+    width: 100%;
+    // padding: 0 0.9em;
+    max-width: 768px;
+    margin: auto;
+}
+.line {
+    width: 200px;
+    height: 2px;
+    background-color: hsl(0,0%,98%);
+    background-color:$veryLightGray;
+    margin: 0 0 3em 0;
+}
+.hero-sub_wrapper {
+    width: 100%; max-width: 1440px;
+}

@@ -1,0 +1,178 @@
+.footer {
+    background-color: hsl(0, 0%, 98%);
+    background-color: $veryLightGray;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 1em;
+    .footer-intro-image-mobile {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+    .footer-intro-image-desktop {
+        display: none;
+        z-index: -1;
+    }
+    footer {
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+        z-index: 3;
+        .footer-top {
+            padding: 3em 0 0 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            place-items: center;
+            position: relative;
+           
+           
+            .footer-logo {
+                margin-bottom: 2em;
+            }
+            .social-icons-container {
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin: 0 0.7em;
+                    cursor: pointer;
+                    &:hover {
+                        filter: sepia(100%) invert(100%);
+                    }
+                }
+            }
+        }
+        .footer-divider {
+            height: 1px;
+            margin-top: 2em;
+            margin: 2em 1em;
+            background-color: hsl(273, 4%, 51%);
+            background-color: $darkGrayishViolet;
+        }
+        .footer-bottom {
+            .footer-nav {
+                margin: 1em 0;
+                display: grid;
+                place-items: center;
+                h4 {
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    margin-bottom: 0.8em;
+                    color: hsl(273, 4%, 51%);
+                    color: $darkGrayishViolet;
+                    font-family: $karlaFont;
+                    font-weight: 700;
+                }
+                li {
+                    font-size: 0.8rem;
+                    margin: 0.6em 0;
+                    text-align: center;
+                    a {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        color: $veryDarkViolet;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 625px) {
+    .footer {
+        footer {
+            .footer-bottom {
+                ul {
+                    li {
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        footer {
+            .footer-bottom {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto ;
+                grid-gap: 1em ;
+                ul {
+                    li {
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .footer {
+        .footer-intro-image-mobile {
+            display: none;
+        }
+        .footer-intro-image-desktop {
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+        }
+        footer {
+            padding: 0 4em;
+            .footer-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .footer-logo {
+                    margin: 0;
+                    width: 112px; height: 18px;
+                    img{
+                        width: 100%; height: 100%;
+                    }
+                }
+               
+            }
+            .footer-divider {
+                margin:2em auto;
+            }
+            .footer-bottom {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                .footer-nav {
+                    h4 {
+                        width: 100%;
+                        text-align: left;
+                        font-size: 1.3rem;
+                    }
+                    ul {
+                        width: 100%;
+                        li {
+                            text-align: left;
+                            margin: 0;
+                            margin-bottom: 1.3em;
+                            a {
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

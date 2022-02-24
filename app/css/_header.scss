@@ -1,0 +1,175 @@
+header {
+    width: 100%;
+    max-width: 1300px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding: 0 0.9em;
+    nav {
+        display: none;
+        li {
+            display: inline-block;
+            font-size: 1.3rem;
+            margin: 0 0.7em;
+            text-transform: uppercase;
+            &:hover {
+                font-weight: 700;
+                color:  hsl(270,9%,17%);
+                color: $veryDarkViolet;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $darkViolet;
+                
+            }
+            button {
+                font-weight: 500;
+                border: 2px solid hsl(270, 9%, 17%);
+                border: 2px solid $veryDarkViolet;
+                font-size: 1.3rem;
+                // width: 100%;
+                outline: none;
+                padding: 0.7rem 2.2rem;
+                text-transform: uppercase;
+                color: $veryDarkViolet;
+                background-color: transparent;
+                transition: all 0.4s;
+                cursor: pointer;
+                &:hover {
+                    background-color: hsl(270, 9%, 17%);
+                    background-color: $veryDarkViolet;
+                    color: white;
+                }
+            }
+        }
+    }
+    .nav-icon {
+        cursor: pointer;
+    }
+
+    .close-nav {
+        display: none;
+    }
+
+    // side menu bar
+    article {
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding-top: 2em;
+        background-color: hsl(270, 9%, 17%);
+        background-color: $veryDarkViolet;
+        transition: left 0.4s;
+        z-index: 1000;
+        .mobile-menu_image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: -1;
+            img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: auto;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+            }
+        }
+        ul {
+            width: 100%;
+            padding: 2em 1.4em;
+            z-index: 2;
+        }
+        li {
+            width: 100%;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 1.3em;
+            a {
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: white;
+                font-weight: 500;
+            }
+            button {
+                width: 100%;
+               
+            }
+        }
+    }
+}
+
+
+@media (min-width: 425px) {
+    header {
+        article {
+            li,
+            button {
+                font-size: 1.3rem;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 625px) {
+    header {
+        article {
+            .mobile-menu_image {
+                height: 160px;
+                img {
+                    height: 100%;
+                }
+            }
+            ul {
+                padding: 1em;
+            }
+            li {
+                margin-bottom: 1.5em;
+            }
+            li,
+            button {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 60px;
+        article {
+            top: 60px;
+            .mobile-menu_image {
+                height: 230px;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    header {
+        height: 75px;
+        nav {
+            display: block;
+        }
+        
+        .nav-icon,
+        article {
+            display: none;
+        }
+    }
+}
